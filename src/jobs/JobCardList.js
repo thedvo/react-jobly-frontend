@@ -1,5 +1,5 @@
 import React from 'react';
-import JobCard from './JobCard';
+import JobCard from '../Jobs/JobCard';
 
 // this component maps out the jobs into a list of cards
 const JobCardList = ({ jobs }) => {

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import JoblyAPI from './api';
-import SearchForm from './SearchForm';
-import CompanyCard from './CompanyCard';
+import JoblyAPI from '../api';
+import SearchForm from '../Forms/SearchForm';
+import CompanyCard from '../Companies/CompanyCard';
 
 const CompanyList = () => {
 	const [companies, setCompanies] = useState(null);

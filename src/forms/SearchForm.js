@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
 
 const SearchForm = ({ makeSearch }) => {
 	const [formData, setFormData] = useState('');
-	// const history = useHistory();
 
 	const handleChange = (e) => {
 		setFormData(e.target.value);

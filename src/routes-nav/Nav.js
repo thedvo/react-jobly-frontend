@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
-import UserContext from './UserContext';
+import UserContext from '../UserContext';
 
 function Nav({ logout }) {
 	const { currentUser } = useContext(UserContext);

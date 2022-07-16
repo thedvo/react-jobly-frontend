@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import JoblyApi from './api';
-import SearchForm from './SearchForm';
-import JobCardList from './JobCardList';
+import JoblyApi from '../api';
+import SearchForm from '../Forms/SearchForm';
+import JobCardList from '../Jobs/JobCardList';
 
 /*
 Maps through Jobs and for each individual job, render a JobCard component.

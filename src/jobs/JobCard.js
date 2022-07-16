@@ -1,5 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
-import UserContext from './UserContext';
+import UserContext from '../UserContext';
 
 /* 
 Card contains (title, salary, equity)

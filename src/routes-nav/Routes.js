@@ -2,15 +2,15 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 // import components from other files so routes can render
-import Home from './Home';
-import CompanyList from './CompanyList';
-import CompanyDetail from './CompanyDetail';
-import JobList from './JobList';
-import LoginForm from './LoginForm';
-import SignUpForm from './SignUpForm';
-import UserEditForm from './UserEditForm';
-import NotFound from './NotFound';
-import ProtectedRoute from './ProtectedRoute';
+import Home from '../Home';
+import CompanyList from '../Companies/CompanyList';
+import CompanyDetail from '../Companies/CompanyDetail';
+import JobList from '../Jobs/JobList';
+import LoginForm from '../Forms/LoginForm';
+import SignUpForm from '../Forms/SignUpForm';
+import UserEditForm from '../Forms/UserEditForm';
+import NotFound from '../routes-nav/NotFound';
+import ProtectedRoute from '../routes-nav/ProtectedRoute';
 
 const Routes = ({ login, signup }) => {
 	console.debug(
