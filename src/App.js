@@ -7,6 +7,7 @@ import Nav from './Nav';
 import Routes from './Routes';
 import jwt from 'jsonwebtoken';
 import UserContext from './UserContext';
+import useLocalStorage from './hooks/useLocalStorage';
 
 /**
  - App component (top of hierarchy) renders Nav and Routes components
@@ -21,10 +22,13 @@ Use useEffect to call the backend to get information on the newly-logged-in-user
 
  */
 
+// Key name for storing token in localStorage for "remember me" re-login
+export const TOKEN_STORAGE_ID = 'jobly-token';
+
 function App() {
-	const [token, setToken] = useState(null);
+	const [token, setToken] = useLocalStorage(null);
 	const [currentUser, setCurrentUser] = useState(null);
-	const [isLoading, setIsLoading] = useState(true);
+	const [isLoading, setIsLoading] = useState(TOKEN_STORAGE_ID);
 	// const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 	console.log(

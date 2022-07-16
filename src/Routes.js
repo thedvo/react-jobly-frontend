@@ -10,6 +10,7 @@ import LoginForm from './LoginForm';
 import SignUpForm from './SignUpForm';
 import UserEditForm from './UserEditForm';
 import NotFound from './NotFound';
+import ProtectedRoute from './ProtectedRoute';
 
 const Routes = ({ login, signup }) => {
 	console.debug(
@@ -26,19 +27,19 @@ const Routes = ({ login, signup }) => {
 			</Route>
 
 			{/* Shows list of Companies */}
-			<Route exact path="/companies">
+			<ProtectedRoute exact path="/companies">
 				<CompanyList />
-			</Route>
+			</ProtectedRoute>
 
 			{/* Individual Company */}
-			<Route path="/companies/:handle">
+			<ProtectedRoute path="/companies/:handle">
 				<CompanyDetail />
-			</Route>
+			</ProtectedRoute>
 
 			{/* Shows list of Jobs */}
-			<Route exact path="/jobs">
+			<ProtectedRoute exact path="/jobs">
 				<JobList />
-			</Route>
+			</ProtectedRoute>
 
 			{/* Displays User Login Form */}
 			<Route exact path="/login">
@@ -59,9 +60,6 @@ const Routes = ({ login, signup }) => {
 			<Route>
 				<NotFound />
 			</Route>
-
-			{/* Redirects to home if user unauthorized */}
-			<Redirect to="/" />
 		</Switch>
 	);
 };
