@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 // import components from other files so routes can render
 import Home from './Home';
@@ -52,9 +52,9 @@ const Routes = ({ login, signup }) => {
 			</Route>
 
 			{/* Displays Edit Profile Form */}
-			<Route exact path="/profile">
+			<ProtectedRoute exact path="/profile">
 				<UserEditForm />
-			</Route>
+			</ProtectedRoute>
 
 			{/* Invalid URL leads user to error page */}
 			<Route>

@@ -69,6 +69,18 @@ class JoblyApi {
 		let res = await this.request('auth/register', data, 'post');
 		return res.token;
 	}
+
+	// Save user profile page once updates are made
+	static async saveProfile(username, data) {
+		let res = await this.request(`users/${username}`, data, 'patch');
+		return res.user;
+	}
+
+	// Apply to a job
+	// endpoint found on users.js (backend)
+	static async applyToJob(username, id) {
+		await this.request(`users/${username}/jobs/${id}`, {}, 'post');
+	}
 }
 
 export default JoblyApi;
