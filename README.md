@@ -11,7 +11,9 @@ Flesh out your components for showing detail on a company, showing the list of a
 
 Make your companies list have a search box, which filters companies to those matching the search (remember: there’s a backend endpoint for this!). Do this filtering in the backend — not by loading all companies and filtering in the front end!
 
-[<img src="/frontend/public/images/companieslist.png" width="500"/>](/react-jobly/frontend/public/images/companieslist.png)
+<img src="/frontend/public/images/companieslist.png" alt="companieslist" width="200"/>
+
+[<img src="/frontend/public/images/companieslist.png" width="500"/>](/frontend/public/images/companieslist.png)
 [<img src="/frontend/public/images/companydetails.png" width="500"/>](/frontend/public/images/companydetails.png)
 
 <hr>
@@ -47,8 +49,6 @@ Things to do:
 [<img src="/frontend/public/images/home_notlogged.png" width="500"/>](/frontend/public/images/home_notlogged.png)
 
 - When you get a token from the login and register processes, store that token on the JoblyApi class, instead of always using the hardcoded test one. You should also store the token in state high up in your hierarchy; this will let use use an effect to watch for changes to that token to kick off a process of loading the information about the new user.
-
-
 
 <hr>
 
