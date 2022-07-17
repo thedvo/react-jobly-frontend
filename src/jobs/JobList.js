@@ -27,7 +27,11 @@ const JobList = () => {
 	}
 
 	if (isLoading) {
-		return <p>Loading &hellip;</p>;
+		return (
+			<p className="Loading fw-bold text-info fs-1 text-center mt-4">
+				Loading &hellip;
+			</p>
+		);
 	}
 
 	return (
