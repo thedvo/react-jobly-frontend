@@ -81,17 +81,19 @@ const UserEditForm = () => {
 	}
 
 	return (
-		<div className="col-md-6 col-lg-4 offset-md-3 offset-lg-4">
+		<div className="col-mb-6 col-lg-4 offset-md-3 offset-lg-4 mt-4">
 			<h2>Profile</h2>
 			<div className="card">
 				<div className="card-body">
 					<form onSubmit={handleSubmit}>
-						<div className="form-group">
-							<label>Username</label>
-							<p className="form-control-plaintext">{formData.username}</p>
+						<div className="mb-3">
+							<label className="form-label fw-bold">Username</label>
+							<p className="form-control-plaintext">@{formData.username}</p>
 						</div>
-						<div className="form-group">
-							<label htmlFor="firstName">First Name</label>
+						<div className="mb-3">
+							<label className="form-label fw-bold" htmlFor="firstName">
+								First Name
+							</label>
 							<input
 								name="firstName"
 								type="text"
@@ -100,8 +102,10 @@ const UserEditForm = () => {
 								className="form-control"
 							/>
 						</div>
-						<div className="form-group">
-							<label htmlFor="lastName">Last Name</label>
+						<div className="mb-3">
+							<label className="form-label fw-bold" htmlFor="lastName">
+								Last Name
+							</label>
 							<input
 								name="lastName"
 								type="text"
@@ -110,8 +114,10 @@ const UserEditForm = () => {
 								className="form-control"
 							/>
 						</div>
-						<div className="form-group">
-							<label htmlFor="email">Email</label>
+						<div className="mb-3">
+							<label className="form-label fw-bold" htmlFor="email">
+								Email
+							</label>
 							<input
 								name="email"
 								type="text"
@@ -120,8 +126,8 @@ const UserEditForm = () => {
 								className="form-control"
 							/>
 						</div>
-						<div className="form-group">
-							<label htmlFor="password">
+						<div className="mb-1">
+							<label className="form-label fw-bold" htmlFor="password">
 								Confirm password to make changes:{' '}
 							</label>
 							<input
@@ -132,9 +138,9 @@ const UserEditForm = () => {
 								className="form-control"
 							/>
 						</div>
-						<button className="btn btn-primary btn-block mt-4">
-							Save Changes
-						</button>
+						<div class="d-grid gap-2">
+							<button className="btn btn-primary mt-4">Save Changes</button>
+						</div>
 					</form>
 				</div>
 			</div>

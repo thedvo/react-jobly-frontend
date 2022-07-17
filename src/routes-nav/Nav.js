@@ -11,25 +11,25 @@ function Nav({ logout }) {
 
 	function loggedInNav() {
 		return (
-			<ul className="navbar-nav ml-auto">
-				<li className="nav-item mr-4">
+			<ul className="navbar-nav ms-auto">
+				<li className="nav-item me-4">
 					<NavLink className="nav-link" exact to="/companies">
 						Companies
 					</NavLink>
 				</li>
-				<li className="nav-item mr-4">
+				<li className="nav-item me-4">
 					<NavLink className="nav-link" exact to="/jobs">
 						Jobs
 					</NavLink>
 				</li>
-				<li className="nav-item mr-4">
+				<li className="nav-item me-4">
 					<NavLink className="nav-link" exact to="/profile">
 						Profile
 					</NavLink>
 				</li>
 				<li className="nav-item">
 					<Link className="nav-link" to="/" onClick={logout}>
-						Logout {currentUser.first_name || currentUser.username}
+						Logout {currentUser.firstName || currentUser.username}
 					</Link>
 				</li>
 			</ul>
@@ -38,13 +38,13 @@ function Nav({ logout }) {
 
 	function loggedOutNav() {
 		return (
-			<ul ul className="navbar-nav ml-auto">
+			<ul ul className="navbar-nav ms-auto">
 				<li className="nav-item mr-4">
 					<NavLink className="nav-link" exact to="/login">
 						Login
 					</NavLink>
 				</li>
-				<li className="nav-item mr-4">
+				<li className="nav-item me-4">
 					<NavLink className="nav-link" exact to="/signup">
 						Sign Up
 					</NavLink>
@@ -54,11 +54,13 @@ function Nav({ logout }) {
 	}
 
 	return (
-		<nav className="Navigation navbar navbar-expand-md">
-			<NavLink className="navbar-brand" exact to="/">
-				Jobly
-			</NavLink>
-			{currentUser ? loggedInNav() : loggedOutNav()}
+		<nav className="Navigation navbar navbar-expand-lg mb-4">
+			<div class="container-fluid">
+				<NavLink className="navbar-brand" exact to="/">
+					Jobly
+				</NavLink>
+				{currentUser ? loggedInNav() : loggedOutNav()}
+			</div>
 		</nav>
 	);
 }

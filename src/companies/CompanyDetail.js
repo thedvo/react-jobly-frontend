@@ -27,7 +27,7 @@ const CompanyDetail = () => {
 	}
 
 	return (
-		<div className="CompanyDetail col-md-8 offset-md-2">
+		<div className="CompanyDetail col-md-8 offset-md-2 mt-4">
 			<h4>{company.name}</h4>
 			<p>{company.description}</p>
 

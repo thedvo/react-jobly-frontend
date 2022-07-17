@@ -42,13 +42,15 @@ const SignUpForm = ({ signup }) => {
 
 	return (
 		<div className="SignupForm">
-			<div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+			<div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4 mt-4">
 				<h2 className="mb-3">Sign Up</h2>
 				<div className="card">
 					<div className="card-body">
 						<form onSubmit={handleSubmit}>
-							<div className="form-group">
-								<label htmlFor="username">Username</label>
+							<div className="mb-3">
+								<label className="form-label fw-bold" htmlFor="username">
+									Username
+								</label>
 								<input
 									id="username"
 									name="username"
@@ -59,8 +61,10 @@ const SignUpForm = ({ signup }) => {
 									className="form-control"
 								/>
 							</div>
-							<div className="form-group">
-								<label htmlFor="password">Password</label>
+							<div className="mb-3">
+								<label className="form-label fw-bold" htmlFor="password">
+									Password
+								</label>
 								<input
 									id="password"
 									name="password"
@@ -71,8 +75,10 @@ const SignUpForm = ({ signup }) => {
 									className="form-control"
 								/>
 							</div>
-							<div className="form-group">
-								<label htmlFor="firstName">First Name</label>
+							<div className="mb-3">
+								<label className="form-label fw-bold" htmlFor="firstName">
+									First Name
+								</label>
 								<input
 									id="firstName"
 									name="firstName"
@@ -83,8 +89,10 @@ const SignUpForm = ({ signup }) => {
 									className="form-control"
 								/>
 							</div>
-							<div className="form-group">
-								<label htmlFor="lastName">Last Name</label>
+							<div className="mb-3">
+								<label className="form-label fw-bold" htmlFor="lastName">
+									Last Name
+								</label>
 								<input
 									id="lastName"
 									name="lastName"
@@ -95,8 +103,10 @@ const SignUpForm = ({ signup }) => {
 									className="form-control"
 								/>
 							</div>
-							<div className="form-group">
-								<label htmlFor="email">Email</label>
+							<div className="mb-3">
+								<label className="form-label fw-bold" htmlFor="email">
+									Email
+								</label>
 								<input
 									id="email"
 									name="email"
@@ -107,7 +117,7 @@ const SignUpForm = ({ signup }) => {
 									className="form-control"
 								/>
 							</div>
-							<button className="btn btn-primary float-right">Submit</button>
+							<button className="btn btn-primary float-end">Submit</button>
 						</form>
 					</div>
 				</div>

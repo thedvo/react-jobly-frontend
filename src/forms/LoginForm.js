@@ -39,13 +39,15 @@ const LoginForm = ({ login }) => {
 
 	return (
 		<div className="LoginForm">
-			<div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+			<div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4 mt-4">
 				<h2 className="mb-3">Log In</h2>
 				<div className="card">
 					<div className="card-body">
 						<form onSubmit={handleSubmit}>
-							<div className="form-group">
-								<label htmlFor="name">Username</label>
+							<div className="mb-3">
+								<label className="form-label fw-bold" htmlFor="name">
+									Username
+								</label>
 								<input
 									id="username"
 									name="username"
@@ -56,8 +58,10 @@ const LoginForm = ({ login }) => {
 									required
 								/>
 							</div>
-							<div className="form-group">
-								<label htmlFor="password">Password</label>
+							<div className="mb-3">
+								<label className="form-label fw-bold" htmlFor="password">
+									Password
+								</label>
 								<input
 									id="password"
 									name="password"
@@ -68,7 +72,7 @@ const LoginForm = ({ login }) => {
 									required
 								/>
 							</div>
-							<button className="btn btn-primary float-right">Submit</button>
+							<button className="btn btn-primary float-end">Submit</button>
 						</form>
 					</div>
 				</div>

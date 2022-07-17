@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Form, Label, Input, Button } from 'reactstrap';
 
 const SearchForm = ({ makeSearch }) => {
 	const [formData, setFormData] = useState('');
@@ -15,20 +16,22 @@ const SearchForm = ({ makeSearch }) => {
 
 	return (
 		<div className="SearchForm mb-4">
-			<form className="form-inline" onSubmit={handleSubmit}>
-				<label htmlFor="name"></label>
-				<input
-					className="form-control form-control-lg flex-grow-1"
+			<Form onSubmit={handleSubmit} style={{ display: 'flex' }}>
+				<Label htmlFor="name"></Label>
+				<Input
 					id="name"
 					name="name"
 					type="text"
+					style={{ height: '3em' }}
 					placeholder="Enter search term..."
 					onChange={handleChange}
 					value={formData}
 					autoComplete="off"
 				/>
-				<button className="btn btn-lg btn-primary">Submit</button>
-			</form>
+				<Button className="btn btn-lg" color="primary">
+					Submit
+				</Button>
+			</Form>
 		</div>
 	);
 };

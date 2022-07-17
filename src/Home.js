@@ -11,18 +11,18 @@ const Home = () => {
 	return (
 		<div className="Home">
 			<div className="container text-center">
-				<h1 className="mb-4 font-weight-bold">Jobly</h1>
+				<h1 className="mb-4 fw-bold">Jobly</h1>
 				<p className="lead">All the jobs in one, convenient place. </p>
 				{currentUser ? (
 					<h3>
-						Welcome Back, {currentUser.first_name || currentUser.username}
+						Welcome Back, {currentUser.firstName || currentUser.username}!
 					</h3>
 				) : (
 					<p>
-						<Link to="/login" className="btn btn-primary font-weight-bold mr-3">
+						<Link to="/login" className="btn btn-primary fw-bold me-3">
 							Login
 						</Link>
-						<Link to="/signup" className="btn btn-primary font-weight-bold">
+						<Link to="/signup" className="btn btn-primary fw-bold">
 							Signup
 						</Link>
 					</p>
