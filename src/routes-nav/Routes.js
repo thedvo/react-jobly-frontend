@@ -3,12 +3,12 @@ import { Route, Switch } from 'react-router-dom';
 
 // import components from other files so routes can render
 import Home from '../Home';
-import CompanyList from '../Companies/CompanyList';
-import CompanyDetail from '../Companies/CompanyDetail';
-import JobList from '../Jobs/JobList';
-import LoginForm from '../Forms/LoginForm';
-import SignUpForm from '../Forms/SignUpForm';
-import UserEditForm from '../Forms/UserEditForm';
+import CompanyList from '../companies/CompanyList';
+import CompanyDetail from '../companies/CompanyDetail';
+import JobList from '../jobs/JobList';
+import LoginForm from '../forms/LoginForm';
+import SignUpForm from '../forms/SignUpForm';
+import UserEditForm from '../forms/UserEditForm';
 import NotFound from '../routes-nav/NotFound';
 import ProtectedRoute from '../routes-nav/ProtectedRoute';
 

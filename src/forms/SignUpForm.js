@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SignUpForm = ({ signup }) => {
 	const INITIAL_STATE = {
@@ -40,55 +41,77 @@ const SignUpForm = ({ signup }) => {
 	}
 
 	return (
-		<div>
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="username">Username</label>
-				<input
-					id="username"
-					name="username"
-					type="text"
-					onChange={handleChange}
-					value={formData.username}
-					autoComplete="off"
-				/>
-				<label htmlFor="password">Password</label>
-				<input
-					id="password"
-					name="password"
-					type="text"
-					onChange={handleChange}
-					value={formData.password}
-					autoComplete="off"
-				/>
-				<label htmlFor="firstName">First Name</label>
-				<input
-					id="firstName"
-					name="firstName"
-					type="text"
-					onChange={handleChange}
-					value={formData.firstName}
-					autoComplete="off"
-				/>
-				<label htmlFor="lastName">Last Name</label>
-				<input
-					id="lastName"
-					name="lastName"
-					type="text"
-					onChange={handleChange}
-					value={formData.lastName}
-					autoComplete="off"
-				/>
-				<label htmlFor="email">Email</label>
-				<input
-					id="email"
-					name="email"
-					type="text"
-					onChange={handleChange}
-					value={formData.email}
-					autoComplete="off"
-				/>
-				<button>Submit</button>
-			</form>
+		<div className="SignupForm">
+			<div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+				<h2 className="mb-3">Sign Up</h2>
+				<div className="card">
+					<div className="card-body">
+						<form onSubmit={handleSubmit}>
+							<div className="form-group">
+								<label htmlFor="username">Username</label>
+								<input
+									id="username"
+									name="username"
+									type="text"
+									onChange={handleChange}
+									value={formData.username}
+									autoComplete="off"
+									className="form-control"
+								/>
+							</div>
+							<div className="form-group">
+								<label htmlFor="password">Password</label>
+								<input
+									id="password"
+									name="password"
+									type="text"
+									onChange={handleChange}
+									value={formData.password}
+									autoComplete="off"
+									className="form-control"
+								/>
+							</div>
+							<div className="form-group">
+								<label htmlFor="firstName">First Name</label>
+								<input
+									id="firstName"
+									name="firstName"
+									type="text"
+									onChange={handleChange}
+									value={formData.firstName}
+									autoComplete="off"
+									className="form-control"
+								/>
+							</div>
+							<div className="form-group">
+								<label htmlFor="lastName">Last Name</label>
+								<input
+									id="lastName"
+									name="lastName"
+									type="text"
+									onChange={handleChange}
+									value={formData.lastName}
+									autoComplete="off"
+									className="form-control"
+								/>
+							</div>
+							<div className="form-group">
+								<label htmlFor="email">Email</label>
+								<input
+									id="email"
+									name="email"
+									type="text"
+									onChange={handleChange}
+									value={formData.email}
+									autoComplete="off"
+									className="form-control"
+								/>
+							</div>
+							<button className="btn btn-primary float-right">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

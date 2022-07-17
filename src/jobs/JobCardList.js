@@ -1,12 +1,13 @@
 import React from 'react';
-import JobCard from '../Jobs/JobCard';
+import JobCard from './JobCard';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // this component maps out the jobs into a list of cards
 const JobCardList = ({ jobs }) => {
 	console.log('JobCardList', 'jobs=', jobs);
 
 	return (
-		<div>
+		<div className="JobCardList">
 			{jobs.map((job) => (
 				<JobCard
 					key={job.id}

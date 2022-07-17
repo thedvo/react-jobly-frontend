@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 import JoblyAPI from '../api';
-import SearchForm from '../Forms/SearchForm';
-import CompanyCard from '../Companies/CompanyCard';
+import SearchForm from '../forms/SearchForm';
+import CompanyCard from './CompanyCard';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CompanyList = () => {
 	const [companies, setCompanies] = useState(null);
@@ -25,21 +27,25 @@ const CompanyList = () => {
 	}
 
 	return (
-		<div>
+		<div className="CompanyList col-md-8 offset-md-2">
 			<SearchForm makeSearch={makeSearch} />
 
 			{/* map out individual company components */}
-			<div>
-				{companies.map((c) => (
-					<CompanyCard
-						key={c.handle}
-						handle={c.handle}
-						name={c.name}
-						description={c.description}
-						logoUrl={c.logoUrl}
-					/>
-				))}
-			</div>
+			{companies.length ? (
+				<div className="CompanyList-list">
+					{companies.map((c) => (
+						<CompanyCard
+							key={c.handle}
+							handle={c.handle}
+							name={c.name}
+							description={c.description}
+							logoUrl={c.logoUrl}
+						/>
+					))}
+				</div>
+			) : (
+				<p className="lead">Sorry, no results found.</p>
+			)}
 		</div>
 	);
 };

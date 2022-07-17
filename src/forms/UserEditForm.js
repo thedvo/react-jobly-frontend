@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import UserContext from '../UserContext';
 import JoblyApi from '../api';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 /**  
  Form to Edit Profile for a logged in user.
@@ -80,41 +81,63 @@ const UserEditForm = () => {
 	}
 
 	return (
-		<div>
+		<div className="col-md-6 col-lg-4 offset-md-3 offset-lg-4">
 			<h2>Profile</h2>
-			<form onSubmit={handleSubmit}>
-				<label>Username</label>
-				<p>{formData.username}</p>
-				<label htmlFor="firstName">First Name</label>
-				<input
-					name="firstName"
-					type="text"
-					value={formData.firstName}
-					onChange={handleChange}
-				/>
-				<label htmlFor="lastName">Last Name</label>
-				<input
-					name="lastName"
-					type="text"
-					value={formData.lastName}
-					onChange={handleChange}
-				/>
-				<label htmlFor="email">Email</label>
-				<input
-					name="email"
-					type="text"
-					value={formData.email}
-					onChange={handleChange}
-				/>
-				<label htmlFor="password">Confirm password to make changes: </label>
-				<input
-					name="password"
-					type="password"
-					value={formData.password}
-					onChange={handleChange}
-				/>
-				<button>Save Changes</button>
-			</form>
+			<div className="card">
+				<div className="card-body">
+					<form onSubmit={handleSubmit}>
+						<div className="form-group">
+							<label>Username</label>
+							<p className="form-control-plaintext">{formData.username}</p>
+						</div>
+						<div className="form-group">
+							<label htmlFor="firstName">First Name</label>
+							<input
+								name="firstName"
+								type="text"
+								value={formData.firstName}
+								onChange={handleChange}
+								className="form-control"
+							/>
+						</div>
+						<div className="form-group">
+							<label htmlFor="lastName">Last Name</label>
+							<input
+								name="lastName"
+								type="text"
+								value={formData.lastName}
+								onChange={handleChange}
+								className="form-control"
+							/>
+						</div>
+						<div className="form-group">
+							<label htmlFor="email">Email</label>
+							<input
+								name="email"
+								type="text"
+								value={formData.email}
+								onChange={handleChange}
+								className="form-control"
+							/>
+						</div>
+						<div className="form-group">
+							<label htmlFor="password">
+								Confirm password to make changes:{' '}
+							</label>
+							<input
+								name="password"
+								type="password"
+								value={formData.password}
+								onChange={handleChange}
+								className="form-control"
+							/>
+						</div>
+						<button className="btn btn-primary btn-block mt-4">
+							Save Changes
+						</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	);
 };

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import UserContext from '../UserContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Nav.css';
 
 function Nav({ logout }) {
 	const { currentUser } = useContext(UserContext);
@@ -9,24 +11,24 @@ function Nav({ logout }) {
 
 	function loggedInNav() {
 		return (
-			<ul>
-				<li>
-					<NavLink exact to="/companies">
+			<ul className="navbar-nav ml-auto">
+				<li className="nav-item mr-4">
+					<NavLink className="nav-link" exact to="/companies">
 						Companies
 					</NavLink>
 				</li>
-				<li>
-					<NavLink exact to="/jobs">
+				<li className="nav-item mr-4">
+					<NavLink className="nav-link" exact to="/jobs">
 						Jobs
 					</NavLink>
 				</li>
-				<li>
-					<NavLink exact to="/profile">
+				<li className="nav-item mr-4">
+					<NavLink className="nav-link" exact to="/profile">
 						Profile
 					</NavLink>
 				</li>
-				<li>
-					<Link to="/" onClick={logout}>
+				<li className="nav-item">
+					<Link className="nav-link" to="/" onClick={logout}>
 						Logout {currentUser.first_name || currentUser.username}
 					</Link>
 				</li>
@@ -36,14 +38,14 @@ function Nav({ logout }) {
 
 	function loggedOutNav() {
 		return (
-			<ul>
-				<li>
-					<NavLink exact to="/login">
+			<ul ul className="navbar-nav ml-auto">
+				<li className="nav-item mr-4">
+					<NavLink className="nav-link" exact to="/login">
 						Login
 					</NavLink>
 				</li>
-				<li>
-					<NavLink exact to="/signup">
+				<li className="nav-item mr-4">
+					<NavLink className="nav-link" exact to="/signup">
 						Sign Up
 					</NavLink>
 				</li>
@@ -52,8 +54,8 @@ function Nav({ logout }) {
 	}
 
 	return (
-		<nav>
-			<NavLink exact to="/">
+		<nav className="Navigation navbar navbar-expand-md">
+			<NavLink className="navbar-brand" exact to="/">
 				Jobly
 			</NavLink>
 			{currentUser ? loggedInNav() : loggedOutNav()}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const LoginForm = ({ login }) => {
 	const INITIAL_STATE = {
@@ -37,28 +38,41 @@ const LoginForm = ({ login }) => {
 	}
 
 	return (
-		<div>
-			<form onSubmit={handleSubmit}>
-				<label htmlFor="name">Username</label>
-				<input
-					id="username"
-					name="username"
-					type="text"
-					onChange={handleChange}
-					value={formData.username}
-					required
-				/>
-				<label htmlFor="password">Password</label>
-				<input
-					id="password"
-					name="password"
-					type="text"
-					onChange={handleChange}
-					value={formData.password}
-					required
-				/>
-				<button>Submit</button>
-			</form>
+		<div className="LoginForm">
+			<div className="container col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+				<h2 className="mb-3">Log In</h2>
+				<div className="card">
+					<div className="card-body">
+						<form onSubmit={handleSubmit}>
+							<div className="form-group">
+								<label htmlFor="name">Username</label>
+								<input
+									id="username"
+									name="username"
+									type="text"
+									onChange={handleChange}
+									value={formData.username}
+									className="form-control"
+									required
+								/>
+							</div>
+							<div className="form-group">
+								<label htmlFor="password">Password</label>
+								<input
+									id="password"
+									name="password"
+									type="text"
+									onChange={handleChange}
+									value={formData.password}
+									className="form-control"
+									required
+								/>
+							</div>
+							<button className="btn btn-primary float-right">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

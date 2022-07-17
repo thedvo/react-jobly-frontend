@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 import JoblyApi from '../api';
-import SearchForm from '../Forms/SearchForm';
-import JobCardList from '../Jobs/JobCardList';
+import SearchForm from '../forms/SearchForm';
+import JobCardList from './JobCardList';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 /*
 Maps through Jobs and for each individual job, render a JobCard component.
@@ -30,10 +31,13 @@ const JobList = () => {
 	}
 
 	return (
-		<div>
+		<div className="JobList col-md-8 offset-md-2">
 			<SearchForm makeSearch={makeSearch} />
-			<JobCardList jobs={jobs} />
-			{/* renders the list which will render the job cards */}
+			{jobs.length ? (
+				<JobCardList jobs={jobs} />
+			) : (
+				<p className="lead">Sorry, no results were found!</p>
+			)}
 		</div>
 	);
 };

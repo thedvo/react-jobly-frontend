@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import JoblyAPI from '../api';
-import JobCardList from '../Jobs/JobCardList';
+import JobCardList from '../jobs/JobCardList';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const CompanyDetail = () => {
 	const { handle } = useParams();
@@ -25,7 +27,7 @@ const CompanyDetail = () => {
 	}
 
 	return (
-		<div>
+		<div className="CompanyDetail col-md-8 offset-md-2">
 			<h4>{company.name}</h4>
 			<p>{company.description}</p>
 

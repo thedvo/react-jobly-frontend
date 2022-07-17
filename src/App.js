@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import './css/App.css';
+import './App.css';
 
 import JoblyApi from './api';
 import Nav from './routes-nav/Nav';
