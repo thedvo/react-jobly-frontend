@@ -11,10 +11,11 @@ Flesh out your components for showing detail on a company, showing the list of a
 
 Make your companies list have a search box, which filters companies to those matching the search (remember: there’s a backend endpoint for this!). Do this filtering in the backend — not by loading all companies and filtering in the front end!
 
-<img src="/frontend/public/images/companieslist.png" alt="companieslist" width="200"/>
+<!-- [<img src="/frontend/public/images/companieslist.png" width="500"/>](/frontend/public/images/companieslist.png)
+[<img src="/frontend/public/images/companydetails.png" width="500"/>](/frontend/public/images/companydetails.png) -->
 
-[<img src="/frontend/public/images/companieslist.png" width="500"/>](/frontend/public/images/companieslist.png)
-[<img src="/frontend/public/images/companydetails.png" width="500"/>](/frontend/public/images/companydetails.png)
+![Companies List](/frontend/public/images/companieslist.png)
+![Companies Details](/frontend/public/images/companydetails.png)
 
 <hr>
 
@@ -22,7 +23,10 @@ Make your companies list have a search box, which filters companies to those mat
 
 Similarly, flesh out the page that lists all jobs, and the “job card”, which shows info on a single job. You can use this component on both the list-all-jobs page as well as the show-detail-on-a-company page.
 
-[<img src="/frontend/public/images/jobslist.png" width="500"/>](/frontend/public/images/jobslist.png)
+<!-- [<img src="/frontend/public/images/jobslist.png" width="500"/>](/frontend/public/images/jobslist.png) -->
+
+![Jobs List](/frontend/public/images/jobslist.png)
+
 
 <hr>
 
@@ -31,9 +35,12 @@ Similarly, flesh out the page that lists all jobs, and the “job card”, which
 Add features where users can log in, sign up, and log out. This should use the backend routes design for authentication and registration.
 
 When the user logs in or registers, retrieve information about that user and keep track of it somewhere easily reached elsewhere in the application.
-
+<!-- 
 [<img src="/frontend/public/images/login.png" width="500"/>](/frontend/public/images/login.png)
-[<img src="/frontend/public/images/signup.png" width="500"/>](/frontend/public/images/signup.png)
+[<img src="/frontend/public/images/signup.png" width="500"/>](/frontend/public/images/signup.png) -->
+![Login Form](/frontend/public/images/login.png)
+![Signup Form](/frontend/public/images/signup.png)
+
 
 Things to do:
 
@@ -45,8 +52,13 @@ Things to do:
 
 - Have the homepage show different messages if the user is logged in or out.
 
-[<img src="/frontend/public/images/home_logged.png" width="500"/>](/frontend/public/images/home_logged.png)
-[<img src="/frontend/public/images/home_notlogged.png" width="500"/>](/frontend/public/images/home_notlogged.png)
+<!-- [<img src="/frontend/public/images/home_logged.png" width="500"/>](/frontend/public/images/home_logged.png)
+[<img src="/frontend/public/images/home_notlogged.png" width="500"/>](/frontend/public/images/home_notlogged.png) -->
+
+![Home (not logged in)](/frontend/public/images/home_notlogged.png)
+
+![Home (logged in)](/frontend/public/images/home_logged.png)
+
 
 - When you get a token from the login and register processes, store that token on the JoblyApi class, instead of always using the hardcoded test one. You should also store the token in state high up in your hierarchy; this will let use use an effect to watch for changes to that token to kick off a process of loading the information about the new user.
 
@@ -70,8 +82,11 @@ Once React knows whether or not there’s a current user, you can start protecti
 **Profile Page**
 
 Add a feature where the logged-in user can edit their profile. Make sure that when a user saves changes here, those are reflected elsewhere in the app.
+<!-- 
+[<img src="/frontend/public/images/profile.png" width="500"/>](/frontend/public/images/profile.png) -->
 
-[<img src="/frontend/public/images/profile.png" width="500"/>](/frontend/public/images/profile.png)
+![Home (logged in)](/frontend/public/images/profile.png)
+
 
 <hr>
 
