@@ -5,10 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 const SignUpForm = ({ signup }) => {
 	const INITIAL_STATE = {
 		username: '',
-		password: 'hello',
-		firstName: 'dan',
-		lastName: 'vo',
-		email: 'dan@gmail.com',
+		password: '',
+		firstName: '',
+		lastName: '',
+		email: '',
 	};
 
 	const [formData, setFormData] = useState(INITIAL_STATE);

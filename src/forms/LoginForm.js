@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const LoginForm = ({ login }) => {
 	const INITIAL_STATE = {
-		username: 'danvo',
-		password: 'hello',
+		username: '',
+		password: '',
 	};
 
 	const [formData, setFormData] = useState(INITIAL_STATE);
